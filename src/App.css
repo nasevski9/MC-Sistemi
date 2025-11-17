@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  text-decoration: none !important;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 40px !important;
+  text-transform: uppercase;
+  color: aliceblue;
+}
+
+a:hover {
+  color: dodgerblue !important;
+}
+
+.home {
+  background-color: #07162e;
+}
+
+
+input::placeholder {
+  opacity: 0.5 !important;
+}
+
+textarea::placeholder {
+  opacity: 0.5 !important;
+}
+

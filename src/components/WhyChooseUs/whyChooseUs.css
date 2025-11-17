@@ -1,0 +1,59 @@
+.why-choose-section {
+    background-color: #0b1b27;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .highlight {
+    color: #00bfff;
+  }
+  
+  .icon-box {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+  }
+  
+  .bg-gradient-green {
+    background: linear-gradient(135deg, #009688, #4caf50);
+  }
+  
+  .bg-gradient-yellow {
+    background: linear-gradient(135deg, #ffb300, #ffeb3b);
+  }
+  
+  .bg-gradient-orange {
+    background: linear-gradient(135deg, #ff7043, #ff9800);
+  }
+  
+  .bg-gradient-blue {
+    background: linear-gradient(135deg, #3f51b5, #2196f3);
+  }
+  
+  .stats-box {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    max-width: 700px;
+  }
+  
+  .text-orange {
+    color: #ff9800;
+  }
+  
+  .btn-light {
+    color: #0b1b27;
+    transition: 0.3s ease;
+  }
+  
+  .btn-light:hover {
+    background-color: #00bfff;
+    color: white;
+  }
+  
+  .why-card p {
+    color: #b0bec5;
+  }
+  

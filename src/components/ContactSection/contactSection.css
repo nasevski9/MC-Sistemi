@@ -1,0 +1,94 @@
+.contact-section {
+    background: linear-gradient(180deg, #f8fbff 0%, #ffffff 100%);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .contact-image-wrapper {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  
+  .contact-image {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    display: block;
+  }
+  
+  .contact-text {
+    color: #222;
+  }
+  
+  .blue-line {
+    width: 60px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: #007bff;
+    margin-bottom: 15px;
+  }
+  
+  .highlight {
+    color: #007bff;
+  }
+  
+  .contact-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    background-color: #f1f7ff;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+  }
+  
+  .contact-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .icon-box {
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  
+  .blue-bg {
+    background-color: #007bff;
+  }
+  
+  .green-bg {
+    background-color: #25d366;
+  }
+  
+  .fb-bg {
+    background-color: #1877f2;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    border: none;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056d2;
+  }
+  
+  .btn-outline-secondary {
+    border: 1.5px solid #ccc;
+    background-color: white;
+    color: #333;
+    transition: 0.3s;
+  }
+  
+  .btn-outline-secondary:hover {
+    background-color: #f8f9fa;
+  }
+  
