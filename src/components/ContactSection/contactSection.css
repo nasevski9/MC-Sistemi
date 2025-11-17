@@ -92,3 +92,38 @@
     background-color: #f8f9fa;
   }
   
+  /* Contact form fields */
+.contact-form input,
+.contact-form textarea {
+  border-radius: 10px;
+  border: 1.5px solid #d6e4ff;
+  background: #ffffff;
+  padding: 12px 14px;
+  width: 100%;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover & focus effect like your cards */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.25);
+}
+
+/* Submit button */
+.contact-form button[type="submit"] {
+  background-color: #007bff;
+  border: none;
+  border-radius: 12px;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  transition: 0.3s;
+}
+
+.contact-form button[type="submit"]:hover {
+  background-color: #005ed7;
+  transform: translateY(-2px);
+}

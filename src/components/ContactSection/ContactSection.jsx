@@ -1,73 +1,95 @@
 import React from "react";
 import "./contactSection.css";
-import { FaFacebookF } from "react-icons/fa";
-import { BsFillTelephoneFill } from "react-icons/bs";
-import { MdEmail } from "react-icons/md";
-import contactImage from '../../assets/contact.jpg';
+import contactImage from "../../assets/contact.jpg";
+
+// Toastify
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const ContactSection = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    toast.success("Вашата порака е испратена!", {
+      position: "top-right",
+      autoClose: 3000,
+    });
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    fetch("/", {
+      method: "POST",
+      body: formData,
+    });
+
+    form.reset();
+  };
+
   return (
     <section className="contact-section py-5" id="contact-section">
+      <ToastContainer />
+
       <div className="container">
         <div className="row align-items-center">
-          {/* Left side - Image */}
+          {/* Left Image */}
           <div className="col-lg-6 mb-4 mb-lg-0">
             <div className="contact-image-wrapper">
               <img src={contactImage} alt="Contact Us" className="contact-image" />
             </div>
           </div>
 
-          {/* Right side - Content */}
+          {/* Right */}
           <div className="col-lg-6">
             <div className="contact-text">
               <div className="blue-line"></div>
               <h2 className="fw-bold mb-3">
-                Имаш прашање? <span className="highlight">Јави ни се!</span>
+                Имаш прашање? <span className="highlight">Контактирај нè!</span>
               </h2>
+
               <h5 className="text-muted mb-4">
-                Нашиот тим е секогаш достапен да ти помогне со избор, нарачка или
-                технички прашања. Контактирај нè преку телефон, WhatsApp или на
-                нашата Facebook страница.
+                Пополни ја формата и нашиот тим ќе ти одговори во најбрз можен рок.
               </h5>
 
-              {/* Contact Info Cards */}
-              <div className="contact-card bg-light mb-3">
-                <div className="icon-box blue-bg">
-                  <MdEmail className="text-white fs-5" />
-                </div>
-                <div>
-                  <h6 className="fw-bold mb-1">Email</h6>
-                  <p className="text-muted small mb-0">
-                    mcsistemipro@gmail.com
-                  </p>
-                </div>
-              </div>
+              {/* Form */}
+              <form
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                onSubmit={handleSubmit}
+                className="contact-form mb-4"
+              >
+                <input type="hidden" name="form-name" value="contact" />
 
-              <div className="contact-card bg-light mb-3">
-                <div className="icon-box green-bg">
-                  <BsFillTelephoneFill className="text-white fs-5" />
+                <div className="mb-3">
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Вашето име"
+                    required
+                  />
                 </div>
-                <div>
-                  <h6 className="fw-bold mb-1">Телефон</h6>
-                  <p className="text-muted small mb-0">
-                    076203080
-                  </p>
-                </div>
-              </div>
 
-              <a href="https://www.facebook.com/mcsistemipro">
-              <div className="contact-card bg-light mb-4">
-                <div className="icon-box fb-bg">
-                  <FaFacebookF className="text-white fs-5" />
+                <div className="mb-3">
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Вашата е-пошта"
+                    required
+                  />
                 </div>
-                <div>
-                  <h6 className="fw-bold mb-1">Facebook</h6>
-                  <p className="text-muted small mb-0">
-                    Следи нè за нови модели и понуди
-                  </p>
+
+                <div className="mb-3">
+                  <textarea
+                    name="message"
+                    rows="4"
+                    placeholder="Вашата порака"
+                    required
+                  ></textarea>
                 </div>
-              </div>
-              </a>
+
+                <button type="submit">Испрати порака</button>
+              </form>
             </div>
           </div>
         </div>
@@ -77,4 +99,3 @@ const ContactSection = () => {
 };
 
 export default ContactSection;
- 
